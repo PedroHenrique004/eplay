@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { breakpoints } from '../../styles'
 
 export const Banner = styled.div`
   height: 480px;
@@ -12,6 +12,10 @@ export const Banner = styled.div`
   background-size: 100%;
 
   padding-top: 16px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    background-size: cover;
+  }
 
   &::after {
     position: absolute;
@@ -36,7 +40,7 @@ export const Banner = styled.div`
 
 export const Infos = styled.div`
   padding: 16px;
-  background-color: ${cores.preta};
+  background-color: transparent;
   max-width: 290px;
   font-weight: bold;
 
